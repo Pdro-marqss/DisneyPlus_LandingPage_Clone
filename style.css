@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/background-desktop.jpg) no-repeat top center;
+    background-size: cover;
+
+    font-family: 'Lato', sans-serif;
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 36px;
+
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 11px 17px;
+    
+    border-radius: 4px;
+    text-align: center;
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: .2s ease;
+}
+.btn:hover {
+    background: #f9f9f9;
+    color: #000;
+}
+
+img.footer__logos {
+    max-width: 600px;
+    position: absolute;
+    bottom: 30px;
+}
+
+img.logo {
+    max-width: 160px;
+}
+
+.main {
+    padding-left: 45px;
+    margin-top: -20px;
+    
+}
+
+/* Esse > significa filho direto, isso quer dizer que é o p filho do main, e não todos os filhos p dentro do main */
+.main > p {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(192, 192, 192, 0.8);
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 45px;
+    color: #f9f9f9;
+
+    margin: 20px 0 30px 0;
+}
+
+.container__precos {
+    display: flex;
+}
+
+.preco span {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    color: #f9f9f9;
+}
+
+.preco {
+    width: 280px;
+    max-width: 100%;
+    color: rgba(192, 192, 192, 0.8);
+}
+
+
+
+.preco a {
+    padding: 16px 14px;
+    background: #0063e5;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    color: #f9f9f9;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+
+    margin-top: 16px;
+}
+.preco a:hover {
+    background: #0483ee;
+}
+
+.right {
+    margin-left: 42px;
+}
+
+
+/* Ajusta o posicionamento do botao da esquerda */
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span.mes {
+    color: rgba(192, 192, 192, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Responsivo */
+
+@media (max-width: 723px){
+    body {
+        background: url(images/background-mobile.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100vw;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn {
+        top: 12px;
+        right: 12px;
+        
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: none;
+
+        padding: 8px 10px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 180px;
+    }
+
+    .main > p {
+        font-size: 9px;
+        line-height: 12px;
+        margin-top: 18px;
+    }
+
+    img.logo {
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 15px;
+        line-height: 15px;
+
+        margin: 15px 0 20px 0;
+    }
+
+    h1 > br {
+        display: none;
+    }
+
+    .container__precos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .preco {
+        width: 320px;
+    }
+
+    .preco span {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    span.mes {
+        font-size: 15px;
+    }
+
+    .left a {
+        margin-bottom: 15px;
+    
+    }
+
+    .right {
+        margin-left: 0;
+    }
+
+    img.footer__logos {
+        position: static;
+        max-width: 320px;
+        margin: 30px 0 15px 0;
+    }
+}
